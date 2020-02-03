@@ -7,9 +7,17 @@ void darvueltas (int tiempo, int velocidad, char sentido);
 task main(){
 
      //mover_tiempo(1000, 75, 'D');
-    // mover_tiempo(1000, 75, 'A');
-    darvueltas(2000, 75, 'H');
-    darvueltas(2000, 75, 'A');
+     //mover_tiempo(1000, 75, 'A');
+     //darvueltas(2000, 75, 'H');
+     //darvueltas(2000, 75, 'A');
+
+    int i = 0;
+    do{
+     darvueltas(1000, 75, 'H');
+     darvueltas(1000, 75, 'A');
+     i = i+1;
+    } while (i < 10);
+     
 }
 
 //Sentido será D para delante, A para atrás
