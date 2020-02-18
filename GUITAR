@@ -1,0 +1,43 @@
+
+
+// #define TONE_C4
+#define TONE_D4 294
+// #define TONE_E4
+// #define TONE_F4
+// #define TONE_G4
+// #define TONE_A4
+// #define TONE_B4
+
+task main()
+{
+      SetSensorTouch (IN_1);
+      SetSensorUltrasonic(IN_4);
+      
+      int distancia = SensorUS(IN_4);
+      
+      while (true)
+      {
+       if (SENSOR_1 == 1)
+       {
+
+       TextOut (0, LCD_LINE1, SensorUS(IN_4));
+       Wait(500);
+
+       PlayTone (TONE_D4, 500);
+       Wait (500);
+
+        /* PlayTone (TONE_C4, 500);
+        Wait (500);
+        PlayTone (TONE_E4, 500);
+        Wait (500);
+        PlayTone (TONE_F4, 500);
+        Wait (500);
+        PlayTone (TONE_G4, 500);
+        Wait (500);
+        PlayTone (TONE_A4, 500);
+        Wait (500);
+        PlayTone (TONE_B4, 500);
+        Wait (500); */
+       }
+      }
+}
